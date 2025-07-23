@@ -13,6 +13,7 @@
     "subtitle": "Experience the revolutionary Kangoo Jumps fitness program. Low-impact, high-energy workouts that transform your body while protecting your joints.",
     "startJourney": "Start Your Journey",
     "watchDemo": "Watch Demo",
+    "loadingYourTransformation": "Loading YOUR Transformation…",
     "classesTaught": "Classes Taught",
     "clientSatisfaction": "Client Satisfaction",
     "yearsExperience": "Years Experience",
@@ -114,7 +115,7 @@
     "availableClasses": "Available Classes",
     "spotsLeft": "{{count}} spots left",
     "spotsLeft_plural": "{{count}} spots left",
-    "instructor": "Instructor: {{name}}",
+    "instructor": "Instructor: ",
     "location": "Location: {{place}}",
     "selected": "Selected",
     "bookNow": "Book Now",
@@ -131,7 +132,12 @@
     "confirmBooking": "Confirm Booking",
     "studioLocation": "SM Fitness Studio, Main Street",
     "equipmentProvided": "Equipment provided & sanitized",
-    "smallGroups": "Small group classes (max 12)",
+    "smallGroups": "Small group classes (max 20)",
+    "levels": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    },
     "days": {
       "monday": "Monday",
       "tuesday": "Tuesday",
@@ -243,10 +249,10 @@
     "emailDesc": "Send me a message anytime",
     "studioLocation": "Studio Location",
     "studioName": "SM Fitness Studio",
-    "address": "123 Main Street\nDowntown Area\nCity, State 12345",
+    "address": "Filipa Kljajića 1a<1/>15300 Loznica, Serbia",
     "classHours": "Class Hours",
     "hours": {
-      "weekdays": "Monday - Friday: 9:00 AM - 8:00 PM",
+      "weekdays": "Monday - Wednesday - Friday: 6 PM - 9 PM",
       "saturday": "Saturday: 8:00 AM - 4:00 PM",
       "sunday": "Sunday: 10:00 AM - 2:00 PM"
     },
@@ -266,7 +272,6 @@
     "forCommunity": "for the fitness community",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
-    "waiver": "Waiver",
     "certified": "Certified Kangoo Jumps Instructor • Licensed & Insured",
     "classTypes": {
       "beginnerBounce": "Beginner Bounce",
@@ -277,6 +282,7 @@
     }
   },
   "common": {
+    "instructor_sm": "Slaðana Marković",
     "loading": "Loading...",
     "error": "An error occurred",
     "tryAgain": "Try again",
