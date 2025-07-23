@@ -7,9 +7,39 @@ const Hero = () => {
   const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+  const [badgeIndex, setBadgeIndex] = useState(0);
+
+  const badges = [
+    {
+      number: '80%',
+      text: 'Less Joint Impact',
+    },
+    {
+      number: '800',
+      text: 'kcal Burned per Hour',
+    },
+    {
+      number: '25%',
+      text: 'More Calorie Burn',
+    },
+    {
+      number: '100%',
+      text: 'Fun & Safe Workout',
+    },
+    {
+      number: 'All',
+      text: 'Ages & Levels Welcome',
+    },
+  ];
 
   useEffect(() => {
     setIsVisible(true);
+
+    const interval = setInterval(() => {
+      setBadgeIndex((prevIndex) => (prevIndex + 1) % badges.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
   }, []);
 
   const handleWatchDemo = () => {
@@ -98,10 +128,23 @@ const Hero = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-accent-pink/20 to-transparent rounded-3xl"></div>
 
-                {/* Floating Stats Card */}
-                <div className="absolute top-6 right-6 bg-primary-white rounded-xl p-4 shadow-lg">
+                {/* Floating badge Card */}
+                {/* <div className="absolute top-6 right-6 bg-primary-white rounded-xl p-4 shadow-lg">
                   <div className="text-2xl font-bold text-accent-pink">80%</div>
                   <div className="text-xs text-neutral-600">{t('hero.lessJointImpact')}</div>
+                </div> */}
+                <div className="absolute top-6 right-6 bg-primary-white rounded-xl p-4 shadow-lg transition-all duration-500 ease-in-out">
+                  <div
+                    key={badgeIndex}
+                    className="transition-opacity duration-500 ease-in-out opacity-100 animate-fade"
+                  >
+                    <div className="text-2xl font-bold text-accent-pink">
+                      {badges[badgeIndex].number}
+                    </div>
+                    <div className="text-xs text-neutral-600">
+                      {badges[badgeIndex].text}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
