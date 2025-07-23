@@ -1,7 +1,8 @@
-import React from 'react';
-import { Instagram, Facebook, MessageCircle, Heart, Mail, Phone, MapPin } from 'lucide-react';
+import { Instagram, Facebook, MessageCircle, Mail, Phone, MapPin } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -20,17 +21,16 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-neutral-400 leading-relaxed mb-6">
-              Transforming lives through the joy of Kangoo Jumps. Join our community and discover 
-              the fun, effective way to achieve your fitness goals.
+              {t('footer.tagline')}
             </p>
             <div className="flex gap-4">
               <a href="#" className="bg-neutral-800 p-3 rounded-lg hover:bg-accent-pink transition-colors duration-300">
-                <Instagram className="w-5 h-5" />
+                <Instagram href="https://www.instagram.com/smkangoojumps/" aria-label="Instagram SM Kangoo Jumps"  className="w-5 h-5" />
               </a>
-              <a href="#" className="bg-neutral-800 p-3 rounded-lg hover:bg-accent-coral transition-colors duration-300">
+              <a href="https://www.facebook.com/SmKangooJumpsMaribor/" aria-label="Facebook SM Kangoo Jumps"  className="bg-neutral-800 p-3 rounded-lg hover:bg-accent-coral transition-colors duration-300">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="bg-neutral-800 p-3 rounded-lg hover:bg-accent-gold transition-colors duration-300">
+              <a href="#" aria-label="Messages SM Kangoo Jumps"  className="bg-neutral-800 p-3 rounded-lg hover:bg-accent-gold transition-colors duration-300">
                 <MessageCircle className="w-5 h-5" />
               </a>
             </div>
@@ -38,44 +38,43 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-6">{t('footer.quickLinks')}</h4>
             <div className="space-y-3">
-              <a href="#about" className="block text-neutral-400 hover:text-accent-pink transition-colors">About SM</a>
-              <a href="#programs" className="block text-neutral-400 hover:text-accent-pink transition-colors">Programs</a>
-              <a href="#schedule" className="block text-neutral-400 hover:text-accent-pink transition-colors">Schedule</a>
-              <a href="#testimonials" className="block text-neutral-400 hover:text-accent-pink transition-colors">Success Stories</a>
-              <a href="#contact" className="block text-neutral-400 hover:text-accent-pink transition-colors">Contact</a>
+              <a href="#about" className="block text-neutral-400 hover:text-accent-pink transition-colors">{t('navigation.about')}</a>
+              <a href="#programs" className="block text-neutral-400 hover:text-accent-pink transition-colors">{t('navigation.programs')}</a>
+              <a href="#schedule" className="block text-neutral-400 hover:text-accent-pink transition-colors">{t('navigation.schedule')}</a>
+              <a href="#testimonials" className="block text-neutral-400 hover:text-accent-pink transition-colors">{t('testimonials.successStories')}</a>
+              <a href="#contact" className="block text-neutral-400 hover:text-accent-pink transition-colors">{t('navigation.contact')}</a>
             </div>
           </div>
 
           {/* Classes */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Classes</h4>
+            <h4 className="text-lg font-semibold mb-6">{t('footer.classes')}</h4>
             <div className="space-y-3">
-              <div className="text-neutral-400">Beginner Bounce</div>
-              <div className="text-neutral-400">Power Jump</div>
-              <div className="text-neutral-400">Gentle Bounce</div>
-              <div className="text-neutral-400">Dance Bounce</div>
-              <div className="text-neutral-400">Private Sessions</div>
+              <div className="text-neutral-400">{t('footer.classTypes.beginnerBounce')}</div>
+              <div className="text-neutral-400">{t('footer.classTypes.powerJump')}</div>
+              <div className="text-neutral-400">{t('footer.classTypes.gentleBounce')}</div>
+              <div className="text-neutral-400">{t('footer.classTypes.danceBounce')}</div>
+              <div className="text-neutral-400">{t('footer.classTypes.privateSessions')}</div>
             </div>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Contact Info</h4>
+            <h4 className="text-lg font-semibold mb-6">{t('footer.contactInfo')}</h4>
             <div className="space-y-4">
               <div className="flex items-start">
                 <MapPin className="w-5 h-5 text-accent-pink mt-1 mr-3" />
                 <div className="text-neutral-400">
-                  <div>123 Main Street</div>
-                  <div>Downtown Area</div>
-                  <div>City, State 12345</div>
+                  <div>Филипа Кљајића 1а</div>
+                  <div>15300 Лозница, Србија</div>
                 </div>
               </div>
               <div className="flex items-center">
                 <Phone className="w-5 h-5 text-accent-pink mr-3" />
-                <a href="tel:+1234567890" className="text-neutral-400 hover:text-accent-pink transition-colors">
-                  +1 (234) 567-8900
+                <a href="tel:+381651234567" className="text-neutral-400 hover:text-accent-pink transition-colors">
+                  +381 65 1234567
                 </a>
               </div>
               <div className="flex items-center">
@@ -93,7 +92,7 @@ const Footer = () => {
                 className="flex items-center text-green-400 hover:text-green-300 transition-colors"
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
-                Quick WhatsApp
+                {t('footer.quickWhatsapp')}
               </a>
             </div>
           </div>
@@ -106,19 +105,18 @@ const Footer = () => {
               © {currentYear} SM Kangoo Jumps. All rights reserved.
             </div>
             <div className="flex items-center text-neutral-400 text-sm">
-              Made with <Heart className="w-4 h-4 text-accent-pink mx-1" /> for the fitness community
+              Made by <a href="https://aleksandar-vujic.web.app" target='_blank' className='text-accent-pink hover:text-accent-coral transition-colors ml-1'>Aleksandar</a>
             </div>
           </div>
-          
+
           <div className="mt-4 pt-4 border-t border-neutral-800">
             <div className="flex flex-col md:flex-row justify-between items-center text-xs text-neutral-500">
               <div className="mb-2 md:mb-0">
-                <a href="#" className="hover:text-accent-pink transition-colors mr-4">Privacy Policy</a>
-                <a href="#" className="hover:text-accent-pink transition-colors mr-4">Terms of Service</a>
-                <a href="#" className="hover:text-accent-pink transition-colors">Waiver</a>
+                <a href="#" className="hover:text-accent-pink transition-colors mr-4">{t('footer.privacyPolicy')}</a>
+                <a href="#" className="hover:text-accent-pink transition-colors mr-4">{t('footer.termsOfService')}</a>
               </div>
               <div>
-                Certified Kangoo Jumps Instructor • Licensed & Insured
+                Certified Kangoo Jumps Instructor • Licensed
               </div>
             </div>
           </div>

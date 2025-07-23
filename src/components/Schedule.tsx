@@ -1,8 +1,11 @@
 import { useState } from 'react';
-import { Calendar, Clock, MapPin, Users, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Calendar, Clock, MapPin, Users } from 'lucide-react';
 import { PopupButton } from "react-calendly";
+import { Trans, useTranslation } from 'react-i18next';
+import i18n from '../i18n';
 
 const Schedule = () => {
+  const { t } = useTranslation();
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [selectedClass, setSelectedClass] = useState<string | null>(null);
 
@@ -11,44 +14,44 @@ const Schedule = () => {
       id: '1',
       name: 'Beginner Bounce',
       time: '9:00 AM',
-      duration: '45 min',
+      duration: 45,
       instructor: 'SM',
       spots: 8,
-      location: 'Studio A',
-      level: 'Beginner',
+      location: 'SM Fitness Studio',
+      level: t('schedule.levels.beginner'),
       bookURL: 'https://calendly.com/alex-vujic-pro/training'
     },
     {
       id: '2',
       name: 'Power Jump',
       time: '10:30 AM',
-      duration: '60 min',
+      duration: 60,
       instructor: 'SM',
       spots: 5,
-      location: 'Studio A',
-      level: 'Advanced',
+      location: 'SM Fitness Studio',
+      level: t('schedule.levels.advanced'),
       bookURL: 'https://calendly.com/alex-vujic-pro/power-jumps'
     },
     {
       id: '3',
       name: 'Dance Bounce',
       time: '6:00 PM',
-      duration: '50 min',
+      duration: 50,
       instructor: 'SM',
       spots: 6,
-      location: 'Studio A',
-      level: 'Intermediate',
+      location: 'SM Fitness Studio',
+      level: t('schedule.levels.intermediate'),
       bookURL: 'https://calendly.com/alex-vujic-pro/dance-bounce'
     },
     {
       id: '4',
       name: 'Gentle Bounce',
       time: '7:30 PM',
-      duration: '30 min',
+      duration: 30,
       instructor: 'SM',
       spots: 10,
-      location: 'Studio A',
-      level: 'All Levels',
+      location: 'SM Fitness Studio',
+      level: t('kangoo.allLevels'),
       bookURL: 'https://calendly.com/alex-vujic-pro/gentle-bounce'
     }
   ];
@@ -62,9 +65,9 @@ const Schedule = () => {
 
   const getLevelColor = (level: string) => {
     switch (level) {
-      case 'Beginner': return 'bg-green-100 text-green-700';
-      case 'Intermediate': return 'bg-yellow-100 text-yellow-700';
-      case 'Advanced': return 'bg-red-100 text-red-700';
+      case t('schedule.levels.beginner'): return 'bg-green-100 text-green-700';
+      case t('schedule.levels.intermediate'): return 'bg-yellow-100 text-yellow-700';
+      case t('schedule.levels.advanced'): return 'bg-red-100 text-red-700';
       default: return 'bg-blue-100 text-blue-700';
     }
   };
@@ -75,14 +78,13 @@ const Schedule = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-2 bg-accent-gold/10 text-accent-gold rounded-full text-sm font-semibold mb-4">
-            Class Schedule
+            {t('schedule.classSchedule')}
           </span>
           <h2 className="text-4xl lg:text-5xl font-bold text-primary-black mb-6">
-            Book Your <span className="text-accent-gold">Next</span> Session
+            <Trans i18nKey="schedule.title" components={{ 1: <span className="text-accent-gold" /> }} />
           </h2>
           <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
-            Choose from our variety of Kangoo Jumps classes throughout the week.
-            All classes include equipment and are suitable for different fitness levels.
+            {t('schedule.description')}
           </p>
         </div>
 
@@ -91,7 +93,7 @@ const Schedule = () => {
           <div className="lg:col-span-1">
             <div className="bg-primary-white rounded-3xl shadow-lg p-8">
               <div className="flex items-center justify-between mb-6">
-                <h3 className="text-xl font-bold text-primary-black">{selectedDate.toLocaleDateString('en-US', {
+                <h3 className="text-xl font-bold text-primary-black">{selectedDate.toLocaleDateString(i18n.language, {
                   weekday: 'long',
                   month: 'long',
                   day: 'numeric'
@@ -129,15 +131,15 @@ const Schedule = () => {
               <div className="space-y-4 pt-6 border-t border-neutral-200">
                 <div className="flex items-center text-sm text-neutral-600">
                   <MapPin className="w-4 h-4 mr-2 text-accent-pink" />
-                  SM Fitness Studio, Main Street
+                  SM Fitness Studio, Филипа Кљајића 1A
                 </div>
                 <div className="flex items-center text-sm text-neutral-600">
                   <Calendar className="w-4 h-4 mr-2 text-accent-pink" />
-                  Equipment provided & sanitized
+                  {t('schedule.equipmentProvided')}
                 </div>
                 <div className="flex items-center text-sm text-neutral-600">
                   <Users className="w-4 h-4 mr-2 text-accent-pink" />
-                  Small group classes (max 12)
+                  {t('schedule.smallGroups')}
                 </div>
               </div>
             </div>
@@ -147,7 +149,7 @@ const Schedule = () => {
           <div className="lg:col-span-2">
             <div className="bg-primary-white rounded-3xl shadow-lg p-8">
               <h3 className="text-xl font-bold text-primary-black mb-6">
-                Available Classes
+                {t('schedule.availableClasses')}
               </h3>
 
               <div className="space-y-4">
@@ -168,10 +170,10 @@ const Schedule = () => {
                             <Clock className="w-4 h-4 mr-1" />
                             {classItem.time}
                           </span>
-                          <span>({classItem.duration})</span>
+                          <span>({t('programs.duration', { count: classItem.duration })})</span>
                           <span className="flex items-center">
                             <Users className="w-4 h-4 mr-1" />
-                            {classItem.spots} spots left
+                            {t('schedule.spotsLeft_plural', { count: classItem.spots })}
                           </span>
                         </div>
                       </div>
@@ -182,8 +184,9 @@ const Schedule = () => {
 
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-4 text-sm text-neutral-600">
-                        <span>Instructor: {classItem.instructor}</span>
-                        <span>Location: {classItem.location}</span>
+                        <span>{t('schedule.instructor')}{t('common.instructor_sm')}</span>
+                        {t('schedule.location', { place: classItem.location })}
+
                       </div>
                       {/* <button 
                         className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
@@ -201,7 +204,7 @@ const Schedule = () => {
                           }`}
                         url={classItem.bookURL}
                         rootElement={document.getElementById("root") as HTMLElement}
-                        text="Book Now!"
+                        text={t('schedule.bookNow')}
                         pageSettings={{
                           backgroundColor: 'ffffff',
                           hideEventTypeDetails: false,
@@ -216,7 +219,7 @@ const Schedule = () => {
               </div>
 
               {/* Booking Form */}
-              {selectedClass && (
+              {/* {selectedClass && (
                 <div className="mt-8 p-6 bg-accent-pink/5 rounded-2xl border border-accent-pink/20">
                   <h4 className="font-semibold text-primary-black mb-4">Complete Your Booking</h4>
                   <div className="grid md:grid-cols-2 gap-4 mb-6">
@@ -250,7 +253,7 @@ const Schedule = () => {
                     Confirm Booking
                   </button>
                 </div>
-              )}
+              )} */}
             </div>
           </div>
         </div>

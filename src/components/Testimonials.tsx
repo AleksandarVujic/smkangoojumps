@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import { useTranslation, Trans } from 'react-i18next';
 
 const Testimonials = () => {
+  const { t } = useTranslation();
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   const testimonials = [
@@ -73,14 +75,13 @@ const Testimonials = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-2 bg-accent-gold/10 text-accent-gold rounded-full text-sm font-semibold mb-4">
-            Success Stories
+            {t('testimonials.successStories')}
           </span>
           <h2 className="text-4xl lg:text-5xl font-bold text-primary-black mb-6">
-            What Our <span className="text-accent-gold">Community</span> Says
+            <Trans i18nKey="testimonials.title" components={{ 1: <span className="text-accent-gold" /> }} />
           </h2>
           <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
-            Real transformations from real people. Discover how Kangoo Jumps has changed lives 
-            and helped our community achieve their fitness goals.
+            {t('testimonials.description')}
           </p>
         </div>
 
@@ -139,15 +140,14 @@ const Testimonials = () => {
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
-              
+
               <div className="flex gap-2">
                 {testimonials.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentTestimonial(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                      index === currentTestimonial ? 'bg-accent-pink' : 'bg-neutral-300'
-                    }`}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentTestimonial ? 'bg-accent-pink' : 'bg-neutral-300'
+                      }`}
                   />
                 ))}
               </div>
@@ -166,43 +166,42 @@ const Testimonials = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
             <div className="text-4xl font-bold text-accent-pink mb-2">150+</div>
-            <div className="text-neutral-600">Happy Clients</div>
+            <div className="text-neutral-600">{t('testimonials.happyClients')}</div>
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-accent-coral mb-2">500+</div>
-            <div className="text-neutral-600">Classes Completed</div>
+            <div className="text-neutral-600">{t('testimonials.classesCompleted')}</div>
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-accent-gold mb-2">98%</div>
-            <div className="text-neutral-600">Satisfaction Rate</div>
+            <div className="text-neutral-600">{t('testimonials.satisfactionRate')}</div>
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-accent-pink mb-2">3+</div>
-            <div className="text-neutral-600">Years Experience</div>
+            <div className="text-neutral-600">{t('testimonials.yearsExperience')}</div>
           </div>
         </div>
 
         {/* CTA */}
         <div className="text-center bg-gradient-to-r from-accent-pink/5 to-accent-gold/5 rounded-3xl p-12">
           <h3 className="text-3xl font-bold text-primary-black mb-4">
-            Ready to Start Your Own Success Story?
+            {t('testimonials.readyTitle')}
           </h3>
           <p className="text-neutral-600 mb-8 max-w-2xl mx-auto">
-            Join our amazing community and discover what Kangoo Jumps can do for you. 
-            Your transformation journey starts with a single bounce!
+            {t('testimonials.readyDesc')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#schedule"
               className="inline-flex items-center px-8 py-4 bg-accent-pink text-primary-white rounded-full font-semibold hover:bg-accent-coral transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
-              Book Your First Class
+              {t('testimonials.bookFirstClass')}
             </a>
             <a
               href="#contact"
               className="inline-flex items-center px-8 py-4 border-2 border-accent-pink text-accent-pink rounded-full font-semibold hover:bg-accent-pink hover:text-primary-white transition-all duration-300"
             >
-              Ask Questions First
+              {t('testimonials.askQuestions')}
             </a>
           </div>
         </div>

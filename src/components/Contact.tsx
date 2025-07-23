@@ -1,26 +1,29 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send, MessageCircle, Instagram, Facebook } from 'lucide-react';
+import { Trans, useTranslation } from 'react-i18next';
+import GoogleMap from './GoogleMap';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
-  });
+  const { t } = useTranslation();
+  // const [formData, setFormData] = useState({
+  //   name: '',
+  //   email: '',
+  //   phone: '',
+  //   message: ''
+  // });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
-  };
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   // Handle form submission
+  //   console.log('Form submitted:', formData);
+  // };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+  // const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  //   setFormData({
+  //     ...formData,
+  //     [e.target.name]: e.target.value
+  //   });
+  // };
 
   return (
     <section id="contact" className="py-20 bg-primary-white">
@@ -28,32 +31,32 @@ const Contact = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-2 bg-accent-pink/10 text-accent-pink rounded-full text-sm font-semibold mb-4">
-            Get in Touch
+            {t('contact.getInTouch')}
           </span>
           <h2 className="text-4xl lg:text-5xl font-bold text-primary-black mb-6">
-            Let's Start Your <span className="text-accent-pink">Journey</span>
+            {/* Let's Start Your <span className="text-accent-pink">Journey</span> */}
+            <Trans i18nKey="contact.title" components={{ 1: <span className="text-accent-pink" /> }} />
           </h2>
           <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
-            Ready to bounce into fitness? Have questions about classes? I'm here to help you 
-            get started on your Kangoo Jumps adventure.
+            {t('contact.description')}
           </p>
         </div>
 
         <div className="grid lg:grid-cols-1 gap-16">
           {/* Contact Information */}
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-primary-black mb-8">Get in Touch</h3>
-            
+            <h3 className="text-2xl font-bold text-primary-black mb-8">{t('contact.getInTouch')}</h3>
+
             <div className="space-y-8 mb-12">
               <div className="flex items-start">
                 <div className="bg-accent-pink/10 p-3 rounded-xl mr-4">
                   <Phone className="w-6 h-6 text-accent-pink" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-primary-black mb-1">Phone & WhatsApp</h4>
-                  <p className="text-neutral-600 mb-2">Call or text me directly</p>
-                  <a href="tel:+1234567890" className="text-accent-pink hover:text-accent-coral transition-colors">
-                    +1 (234) 567-8900
+                  <h4 className="font-semibold text-primary-black mb-1">{t('contact.phoneWhatsapp')}</h4>
+                  <p className="text-neutral-600 mb-2">{t('contact.phoneDesc')}</p>
+                  <a href="tel:+381651234567" className="text-accent-pink hover:text-accent-coral transition-colors">
+                    +381 65 1234567
                   </a>
                 </div>
               </div>
@@ -63,8 +66,8 @@ const Contact = () => {
                   <Mail className="w-6 h-6 text-accent-coral" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-primary-black mb-1">Email</h4>
-                  <p className="text-neutral-600 mb-2">Send me a message anytime</p>
+                  <h4 className="font-semibold text-primary-black mb-1">{t('contact.email')}</h4>
+                  <p className="text-neutral-600 mb-2">{t('contact.emailDesc')}</p>
                   <a href="mailto:sm@kangoojumps.com" className="text-accent-coral hover:text-accent-pink transition-colors">
                     sm@kangoojumps.com
                   </a>
@@ -76,12 +79,11 @@ const Contact = () => {
                   <MapPin className="w-6 h-6 text-accent-gold" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-primary-black mb-1">Studio Location</h4>
-                  <p className="text-neutral-600 mb-2">SM Fitness Studio</p>
+                  <h4 className="font-semibold text-primary-black mb-1">{t('contact.studioLocation')}</h4>
+                  <p className="text-neutral-600 mb-2">{t('contact.studioName')}</p>
                   <address className="text-neutral-600 not-italic">
-                    123 Main Street<br />
-                    Downtown Area<br />
-                    City, State 12345
+                    {/* {t('contact.address')} */}
+                    <Trans i18nKey="contact.address" components={{ 1: <br /> }} />
                   </address>
                 </div>
               </div>
@@ -91,11 +93,9 @@ const Contact = () => {
                   <Clock className="w-6 h-6 text-accent-pink" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-primary-black mb-1">Class Hours</h4>
+                  <h4 className="font-semibold text-primary-black mb-1">{t('contact.classHours')}</h4>
                   <div className="space-y-1 text-neutral-600">
-                    <p>Monday - Friday: 9:00 AM - 8:00 PM</p>
-                    <p>Saturday: 8:00 AM - 4:00 PM</p>
-                    <p>Sunday: 10:00 AM - 2:00 PM</p>
+                    <p>{t('contact.hours.weekdays')}</p>
                   </div>
                 </div>
               </div>
@@ -103,15 +103,15 @@ const Contact = () => {
 
             {/* Social Links */}
             <div>
-              <h4 className="font-semibold text-primary-black mb-4">Follow My Journey</h4>
+              <h4 className="font-semibold text-primary-black mb-4">{t('contact.followJourney')}</h4>
               <div className="flex gap-4">
-                <a href="#" className="bg-accent-pink/10 p-3 rounded-xl hover:bg-accent-pink hover:text-primary-white transition-all duration-300">
+                <a href="https://www.instagram.com/smkangoojumps/" aria-label="Instagram SM Kangoo Jumps" className="bg-accent-pink/10 p-3 rounded-xl hover:bg-accent-pink hover:text-primary-white transition-all duration-300">
                   <Instagram className="w-6 h-6" />
                 </a>
-                <a href="#" className="bg-accent-coral/10 p-3 rounded-xl hover:bg-accent-coral hover:text-primary-white transition-all duration-300">
+                <a href="https://www.facebook.com/SmKangooJumpsMaribor/" aria-label="Facebook SM Kangoo Jumps" className="bg-accent-coral/10 p-3 rounded-xl hover:bg-accent-coral hover:text-primary-white transition-all duration-300">
                   <Facebook className="w-6 h-6" />
                 </a>
-                <a href="#" className="bg-accent-gold/10 p-3 rounded-xl hover:bg-accent-gold hover:text-primary-white transition-all duration-300">
+                <a href="#" aria-label="Messages SM Kangoo Jumps" className="bg-accent-gold/10 p-3 rounded-xl hover:bg-accent-gold hover:text-primary-white transition-all duration-300">
                   <MessageCircle className="w-6 h-6" />
                 </a>
               </div>
@@ -121,17 +121,17 @@ const Contact = () => {
             <div className="mt-8 p-6 bg-gradient-to-r from-green-50 to-green-100 rounded-2xl border border-green-200">
               <div className="flex items-center mb-3">
                 <MessageCircle className="w-6 h-6 text-green-600 mr-2" />
-                <h4 className="font-semibold text-green-800">Quick WhatsApp</h4>
+                <h4 className="font-semibold text-green-800">{t('contact.quickWhatsapp')}</h4>
               </div>
               <p className="text-green-700 mb-4 text-sm">
-                Get instant answers to your questions! Message me on WhatsApp for the fastest response.
+                {t('contact.quickWhatsappDesc')}
               </p>
               <a
                 href="https://wa.me/1234567890?text=Hi%20SM!%20I'm%20interested%20in%20Kangoo%20Jumps%20classes."
                 className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-full text-sm font-semibold hover:bg-green-700 transition-colors"
               >
                 <MessageCircle className="w-4 h-4 mr-2" />
-                Message on WhatsApp
+                {t('contact.messageWhatsapp')}
               </a>
             </div>
           </div>
@@ -224,17 +224,18 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="mt-8 h-64 bg-neutral-200 rounded-2xl overflow-hidden relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-accent-pink/20 to-accent-coral/20 flex items-center justify-center">
-                <div className="text-center text-neutral-600">
-                  <MapPin className="w-12 h-12 mx-auto mb-2" />
+            </div>
+            */}
+          <div className="mt-8 h-64 bg-neutral-200 rounded-2xl overflow-hidden relative">
+            <div className="absolute inset-0 bg-gradient-to-br from-accent-pink/20 to-accent-coral/20 flex items-center justify-center">
+              <div className="text-center text-neutral-600">
+                {/* <MapPin className="w-12 h-12 mx-auto mb-2" />
                   <p className="font-semibold">Studio Location Map</p>
-                  <p className="text-sm">Interactive map would be embedded here</p>
-                </div>
+                  <p className="text-sm">Interactive map would be embedded here</p> */}
+                  <GoogleMap />
               </div>
             </div>
           </div>
-          */}
         </div>
       </div>
     </section>

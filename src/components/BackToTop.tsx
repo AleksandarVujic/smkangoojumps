@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ChevronUp } from 'lucide-react';
 
@@ -29,9 +29,8 @@ const BackToTop = () => {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-8 right-8 z-50 p-4 bg-accent-pink text-primary-white rounded-full shadow-lg hover:bg-accent-coral transition-all duration-300 transform hover:scale-110 hover:shadow-xl ${
-        isVisible ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'
-      }`}
+      className={`fixed bottom-8 right-8 z-50 p-4 bg-accent-pink text-primary-white rounded-full shadow-lg hover:bg-accent-coral transition-all duration-300 transform hover:scale-110 hover:shadow-xl ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'
+        }`}
       aria-label={t('navigation.backToTop')}
     >
       <ChevronUp className="w-6 h-6" />

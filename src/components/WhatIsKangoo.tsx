@@ -1,30 +1,34 @@
-import React from 'react';
 import { Shield, Heart, Smile, Users } from 'lucide-react';
+import { useRef } from 'react';
+import { Trans, useTranslation } from 'react-i18next';
 
 const WhatIsKangoo = () => {
+  const { t } = useTranslation();
+  const videoRef = useRef<HTMLVideoElement>(null);
+
   const benefits = [
     {
       icon: Shield,
-      title: "Joint-Friendly",
-      description: "Reduces impact on joints by up to 80%, making it perfect for all ages and fitness levels",
+      title: t('kangoo.jointFriendly'),
+      description: t('kangoo.jointDesc'),
       color: "text-accent-pink"
     },
     {
       icon: Heart,
-      title: "Cardio Boost",
-      description: "Burns more calories than traditional workouts while feeling like you're having fun",
+      title: t('kangoo.cardioBoost'),
+      description: t('kangoo.cardioDesc'),
       color: "text-accent-coral"
     },
     {
       icon: Smile,
-      title: "Pure Fun",
-      description: "Experience the joy of bouncing while getting an incredible full-body workout",
+      title: t('kangoo.pureFun'),
+      description: t('kangoo.funDesc'),
       color: "text-accent-gold"
     },
     {
       icon: Users,
-      title: "All Levels",
-      description: "Suitable for beginners to advanced athletes, with modifications for everyone",
+      title: t('kangoo.allLevels'),
+      description: t('kangoo.levelsDesc'),
       color: "text-accent-pink"
     }
   ];
@@ -35,14 +39,13 @@ const WhatIsKangoo = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-2 bg-accent-pink/10 text-accent-pink rounded-full text-sm font-semibold mb-4">
-            Revolutionary Fitness
+            {t('kangoo.revolutionaryFitness')}
           </span>
           <h2 className="text-4xl lg:text-5xl font-bold text-primary-black mb-6">
-            What is <span className="text-accent-pink">Kangoo Jumps</span>?
+            <Trans i18nKey="kangoo.title" components={{ 1: <span className="text-accent-pink" /> }} />
           </h2>
           <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
-            Kangoo Jumps is a revolutionary fitness program that combines cardiovascular exercise with fun, 
-            using specially designed rebound shoes that provide incredible benefits for your body and mind.
+            {t('kangoo.description')}
           </p>
         </div>
 
@@ -50,21 +53,32 @@ const WhatIsKangoo = () => {
           {/* Left - Video/Image */}
           <div className="relative">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-              <img
-                src="https://images.pexels.com/photos/4761771/pexels-photo-4761771.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Kangoo Jumps in Action"
-                className="w-full h-96 object-cover"
-              />
+              <video
+                ref={videoRef}
+                className="w-full h-full object-cover rounded-2xl"
+                controls
+                preload="metadata"
+                playsInline
+                muted
+                autoPlay
+                loop
+              >
+                <source src='assets/videos/video_1.mp4' type="video/mp4" />
+              </video>
               <div className="absolute inset-0 bg-gradient-to-t from-primary-black/50 to-transparent"></div>
-              
+
               {/* Play Button Overlay */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <button className="bg-primary-white/90 backdrop-blur-sm p-6 rounded-full shadow-lg hover:bg-primary-white transition-all duration-300 transform hover:scale-110">
+              {/* <div className="absolute inset-0 flex items-center justify-center">
+                <button onClick={() => {
+                  videoRef.current?.play().catch(error => {
+                    console.log('Autoplay prevented by browser:', error);
+                  });
+                }} className="bg-primary-white/90 backdrop-blur-sm p-6 rounded-full shadow-lg hover:bg-primary-white transition-all duration-300 transform hover:scale-110">
                   <div className="w-8 h-8 bg-accent-pink rounded-full flex items-center justify-center">
                     <div className="w-0 h-0 border-l-[12px] border-l-primary-white border-y-[8px] border-y-transparent ml-1"></div>
                   </div>
                 </button>
-              </div>
+              </div> */}
             </div>
 
             {/* Stats Overlay */}
@@ -79,33 +93,29 @@ const WhatIsKangoo = () => {
           {/* Right - Content */}
           <div>
             <h3 className="text-3xl font-bold text-primary-black mb-6">
-              The Science Behind the Bounce
+              {t('kangoo.scienceBehind')}
             </h3>
             <div className="space-y-6 text-neutral-600 leading-relaxed">
               <p>
-                Kangoo Jumps uses specially designed rebound shoes with a patented spring system that 
-                reduces the impact on your joints while maximizing the cardiovascular and muscle-toning benefits.
+                {t('kangoo.scienceDesc1')}
               </p>
               <p>
-                Originally developed for rehabilitation, these shoes have evolved into one of the most 
-                effective and enjoyable fitness programs available today. The unique bouncing motion 
-                engages your core, improves balance, and provides a full-body workout like no other.
+                {t('kangoo.scienceDesc2')}
               </p>
               <p>
-                Studies show that Kangoo Jumps can burn up to 25% more calories than traditional 
-                aerobics while being gentler on your body than walking on concrete.
+                {t('kangoo.scienceDesc3')}
               </p>
             </div>
 
             <div className="mt-8 p-6 bg-accent-pink/5 rounded-xl border border-accent-pink/20">
-              <h4 className="font-semibold text-primary-black mb-3">Perfect For:</h4>
+              <h4 className="font-semibold text-primary-black mb-3">{t('kangoo.perfectFor')}</h4>
               <div className="grid grid-cols-2 gap-2 text-sm text-neutral-600">
-                <div>• Weight Loss</div>
-                <div>• Injury Recovery</div>
-                <div>• Cardiovascular Health</div>
-                <div>• Stress Relief</div>
-                <div>• Balance & Coordination</div>
-                <div>• Core Strengthening</div>
+                <div>• {t('kangoo.weightLoss')} </div>
+                <div>• {t('kangoo.injuryRecovery')}</div>
+                <div>• {t('kangoo.cardiovascularHealth')}</div>
+                <div>• {t('kangoo.stressRelief')}</div>
+                <div>• {t('kangoo.balanceCoordination')}</div>
+                <div>• {t('kangoo.coreStrengthening')}</div>
               </div>
             </div>
           </div>

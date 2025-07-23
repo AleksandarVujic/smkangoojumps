@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Menu, X, Calendar, Phone } from 'lucide-react';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -25,18 +25,22 @@ const Header = () => {
   ];
 
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-primary-white shadow-lg backdrop-blur-sm' : 'bg-transparent'
-    }`}>
+    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-primary-white shadow-lg backdrop-blur-sm' : 'bg-transparent'
+      }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <button 
+          <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="flex items-center hover:opacity-80 transition-opacity duration-300"
           >
-            <div className="w-12 h-12 bg-accent-pink rounded-lg flex items-center justify-center">
-              <span className="text-primary-white font-bold text-xl">SM</span>
+            <div className="w-16 h-16 bg-accent-pink rounded-lg flex items-center justify-center">
+              {/* <span className="text-primary-white font-bold text-xl">SM</span> */}
+              <img
+                src="/sm_kangoo_jumps_logo.png"
+                alt="SM Kangoo Jumps Logo"
+                className="h-16 w-auto rounded-lg"
+              />
             </div>
             <div className="ml-3 hidden sm:block">
               <h1 className="text-lg font-bold text-primary-black">SM Kangoo Jumps</h1>

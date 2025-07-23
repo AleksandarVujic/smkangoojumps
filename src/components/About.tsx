@@ -1,19 +1,20 @@
-import React from 'react';
 import { Award, Heart, Users, Target } from 'lucide-react';
+import { Trans, useTranslation } from 'react-i18next';
 
 const About = () => {
+  const { t } = useTranslation();
   const certifications = [
-    "Certified Kangoo Jumps Instructor",
-    "Personal Training Certification",
-    "Group Fitness Specialist",
-    "Nutrition Wellness Coach"
+    t('about.certifiedInstructor'),
+    t('about.personalTraining'),
+    t('about.groupFitness'),
+    t('about.nutritionCoach')
   ];
 
   const achievements = [
-    { icon: Award, title: "Certified Professional", description: "Licensed Kangoo Jumps instructor with international certification" },
-    { icon: Heart, title: "Passionate Trainer", description: "Dedicated to helping clients achieve their fitness goals safely" },
-    { icon: Users, title: "Community Builder", description: "Creating supportive fitness communities that inspire growth" },
-    { icon: Target, title: "Results Focused", description: "Proven track record of transforming lives through fitness" }
+    { icon: Award, title: t('about.certifiedProfessional'), description: t('about.certifiedDesc') },
+    { icon: Heart, title: t('about.passionateTrainer'), description: t('about.passionateDesc') },
+    { icon: Users, title: t('about.communityBuilder'), description: t('about.communityDesc') },
+    { icon: Target, title: t('about.resultsFocused'), description: t('about.resultsDesc') }
   ];
 
   return (
@@ -24,24 +25,24 @@ const About = () => {
           <div className="relative">
             <div className="grid grid-cols-2 gap-4">
               <img
-                src="https://images.pexels.com/photos/3076509/pexels-photo-3076509.jpeg?auto=compress&cs=tinysrgb&w=400"
+                src="assets/images/kangoo_about_me_1.png"
                 alt="SM Instructor Portrait"
-                className="w-full h-64 object-cover rounded-2xl shadow-lg"
+                className="w-full h-64 object-cover rounded-2xl shadow-lg transition-transform duration-300 ease-in-out hover:scale-[1.3]"
               />
               <img
-                src="https://images.pexels.com/photos/3768916/pexels-photo-3768916.jpeg?auto=compress&cs=tinysrgb&w=400"
+                src="assets/images/kangoo_about_me_2.png"
                 alt="Training Session"
-                className="w-full h-64 object-cover rounded-2xl shadow-lg mt-8"
+                className="w-full h-64 object-cover rounded-2xl shadow-lg mt-8 transition-transform duration-300 ease-in-out hover:scale-[1.3]"
               />
             </div>
             <div className="mt-4">
               <img
-                src="https://images.pexels.com/photos/3837757/pexels-photo-3837757.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="assets/images/kangoo_about_me_3.png"
                 alt="Group Class"
-                className="w-full h-48 object-cover rounded-2xl shadow-lg"
+                className="w-full h-48 object-cover rounded-2xl shadow-lg transition-transform duration-300 ease-in-out hover:scale-[1.3]"
               />
             </div>
-            
+
             {/* Floating Element */}
             <div className="absolute -top-4 -right-4 bg-accent-pink text-primary-white p-4 rounded-full shadow-lg animate-float">
               <Heart className="w-6 h-6" />
@@ -52,32 +53,27 @@ const About = () => {
           <div>
             <div className="mb-8">
               <span className="inline-block px-4 py-2 bg-accent-pink/10 text-accent-pink rounded-full text-sm font-semibold mb-4">
-                Meet Your Instructor
+                {t('about.meetInstructor')}
               </span>
               <h2 className="text-4xl lg:text-5xl font-bold text-primary-black mb-6">
-                About <span className="text-accent-pink">SM</span>
+                <Trans i18nKey="about.title" components={{ 1: <span className="text-accent-pink" /> }} />
               </h2>
               <div className="space-y-6 text-neutral-600 leading-relaxed">
                 <p>
-                  Welcome! I'm SM, your certified Kangoo Jumps instructor and the only licensed trainer in our area. 
-                  My journey with Kangoo Jumps began three years ago when I discovered this incredible low-impact, 
-                  high-energy workout that transformed not just my body, but my entire approach to fitness.
+                  {t('about.description1', { name: 'SM' })}
                 </p>
                 <p>
-                  After experiencing the amazing benefits firsthand - from increased cardiovascular health to improved 
-                  joint protection - I knew I had to share this with others. I became certified to bring this 
-                  revolutionary fitness program to our community.
+                  {t('about.description2')}
                 </p>
                 <p>
-                  Every class I teach is designed to be inclusive, fun, and effective. Whether you're a fitness 
-                  beginner or an experienced athlete, Kangoo Jumps offers something special for everyone.
+                  {t('about.description3')}
                 </p>
               </div>
             </div>
 
             {/* Certifications */}
             <div className="mb-8">
-              <h3 className="text-xl font-semibold text-primary-black mb-4">Certifications & Credentials</h3>
+              <h3 className="text-xl font-semibold text-primary-black mb-4">{t('about.certifications')}</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {certifications.map((cert, index) => (
                   <div key={index} className="flex items-center">
