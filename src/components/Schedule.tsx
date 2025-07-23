@@ -131,7 +131,7 @@ const Schedule = () => {
               <div className="space-y-4 pt-6 border-t border-neutral-200">
                 <div className="flex items-center text-sm text-neutral-600">
                   <MapPin className="w-4 h-4 mr-2 text-accent-pink" />
-                  SM Fitness Studio, Филипа Кљајића 1A
+                  SM Fitness Studio
                 </div>
                 <div className="flex items-center text-sm text-neutral-600">
                   <Calendar className="w-4 h-4 mr-2 text-accent-pink" />

@@ -81,10 +81,11 @@ const Contact = () => {
                 <div>
                   <h4 className="font-semibold text-primary-black mb-1">{t('contact.studioLocation')}</h4>
                   <p className="text-neutral-600 mb-2">{t('contact.studioName')}</p>
-                  <address className="text-neutral-600 not-italic">
-                    {/* {t('contact.address')} */}
-                    <Trans i18nKey="contact.address" components={{ 1: <br /> }} />
-                  </address>
+                  <a href="https://maps.app.goo.gl/yFwAkaJqDr9PZ1zD7" target="_blank" rel="noopener noreferrer" className="text-accent-gold hover:text-accent-pink transition-colors">
+                    <address className="text-neutral-600 not-italic">
+                      <Trans i18nKey="contact.address" components={{ 1: <br /> }} />
+                    </address>
+                  </a>
                 </div>
               </div>
 
@@ -232,7 +233,7 @@ const Contact = () => {
                 {/* <MapPin className="w-12 h-12 mx-auto mb-2" />
                   <p className="font-semibold">Studio Location Map</p>
                   <p className="text-sm">Interactive map would be embedded here</p> */}
-                  <GoogleMap />
+                <GoogleMap />
               </div>
             </div>
           </div>

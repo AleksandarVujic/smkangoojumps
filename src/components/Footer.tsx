@@ -1,5 +1,5 @@
 import { Instagram, Facebook, MessageCircle, Mail, Phone, MapPin } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -25,12 +25,12 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a href="#" className="bg-neutral-800 p-3 rounded-lg hover:bg-accent-pink transition-colors duration-300">
-                <Instagram href="https://www.instagram.com/smkangoojumps/" aria-label="Instagram SM Kangoo Jumps"  className="w-5 h-5" />
+                <Instagram href="https://www.instagram.com/smkangoojumps/" aria-label="Instagram SM Kangoo Jumps" className="w-5 h-5" />
               </a>
-              <a href="https://www.facebook.com/SmKangooJumpsMaribor/" aria-label="Facebook SM Kangoo Jumps"  className="bg-neutral-800 p-3 rounded-lg hover:bg-accent-coral transition-colors duration-300">
+              <a href="https://www.facebook.com/SmKangooJumpsMaribor/" aria-label="Facebook SM Kangoo Jumps" className="bg-neutral-800 p-3 rounded-lg hover:bg-accent-coral transition-colors duration-300">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" aria-label="Messages SM Kangoo Jumps"  className="bg-neutral-800 p-3 rounded-lg hover:bg-accent-gold transition-colors duration-300">
+              <a href="#" aria-label="Messages SM Kangoo Jumps" className="bg-neutral-800 p-3 rounded-lg hover:bg-accent-gold transition-colors duration-300">
                 <MessageCircle className="w-5 h-5" />
               </a>
             </div>
@@ -64,13 +64,18 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-6">{t('footer.contactInfo')}</h4>
             <div className="space-y-4">
-              <div className="flex items-start">
-                <MapPin className="w-5 h-5 text-accent-pink mt-1 mr-3" />
-                <div className="text-neutral-400">
-                  <div>Филипа Кљајића 1а</div>
-                  <div>15300 Лозница, Србија</div>
+              <a href="https://maps.app.goo.gl/yFwAkaJqDr9PZ1zD7" target="_blank" rel="noopener noreferrer" className="text-accent-gold hover:text-accent-pink transition-colors">
+                <div className="flex items-start">
+                  <MapPin className="w-5 h-5 text-accent-pink mt-1 mr-3" />
+                  <div className="text-neutral-400">
+                    {/* <div>Филипа Кљајића 1а</div>
+                    <div>15300 Лозница, Србија</div> */}
+                    <Trans i18nKey="contact.address" components={{ 1: <br /> }} />
+
+
+                  </div>
                 </div>
-              </div>
+              </a>
               <div className="flex items-center">
                 <Phone className="w-5 h-5 text-accent-pink mr-3" />
                 <a href="tel:+381651234567" className="text-neutral-400 hover:text-accent-pink transition-colors">
