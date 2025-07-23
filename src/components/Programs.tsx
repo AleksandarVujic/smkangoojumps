@@ -122,23 +122,21 @@ const Programs = () => {
                   </div>
                 </div>
 
-                {/* CTA */}
                 <div className="flex items-center justify-between pt-6 border-t border-neutral-200">
                   <div>
                     <span className="text-sm text-neutral-500">{t('programs.pricing')}</span>
                     <div className="font-semibold text-primary-black">{program.price}</div>
                   </div>
-                  <button className="flex items-center px-6 py-3 bg-accent-pink text-primary-white rounded-full hover:bg-accent-coral transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                  <a href="#schedule" className="flex cursor-pointer items-center px-6 py-3 bg-accent-pink text-primary-white rounded-full hover:bg-accent-coral transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                     {t('programs.bookClass')}
                     <ArrowRight className="w-4 h-4 ml-2" />
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-accent-pink/5 to-accent-coral/5 rounded-3xl p-12">
           <h3 className="text-3xl font-bold text-primary-black mb-4">
             {t('programs.notSureTitle')}
