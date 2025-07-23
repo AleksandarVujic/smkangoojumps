@@ -17,12 +17,19 @@
     "classesTaught": "Classes Taught",
     "clientSatisfaction": "Client Satisfaction",
     "yearsExperience": "Years Experience",
-    "lessJointImpact": "Less Joint Impact"
+    "lessJointImpact": "Less Joint Impact",
+    "statsBadges": {
+      "lessJointImpact": "Less Joint Impact",
+      "caloriesBurnedPerHour": "kcal Burned per Hour",
+      "moreCaloriesBurned": "More Calorie Burn",
+      "funSafeTraining": "Fun & Safe Workout",
+      "allAgesLevelsWelcome": "Ages & Levels Welcome"
+    }
   },
   "about": {
     "meetInstructor": "Meet Your Instructor",
     "title": "About <1>SM</1>",
-    "description1": "Welcome! I'm SM, your certified Kangoo Jumps instructor and the only licensed trainer in our area. My journey with Kangoo Jumps began three years ago when I discovered this incredible low-impact, high-energy workout that transformed not just my body, but my entire approach to fitness.",
+    "description1": "Welcome! I'm Sladjana Marković, your certified Kangoo Jumps instructor and the only licensed trainer in our area. My journey with Kangoo Jumps began three years ago when I discovered this incredible low-impact, high-energy workout that transformed not just my body, but my entire approach to fitness.",
     "description2": "After experiencing the amazing benefits firsthand - from increased cardiovascular health to improved joint protection - I knew I had to share this with others. I became certified to bring this revolutionary fitness program to our community.",
     "description3": "Every class I teach is designed to be inclusive, fun, and effective. Whether you're a fitness beginner or an experienced athlete, Kangoo Jumps offers something special for everyone.",
     "certifications": "Certifications & Credentials",

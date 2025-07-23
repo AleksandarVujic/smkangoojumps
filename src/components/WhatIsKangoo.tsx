@@ -85,7 +85,9 @@ const WhatIsKangoo = () => {
             <div className="absolute -bottom-6 -right-6 bg-primary-white rounded-xl p-6 shadow-lg">
               <div className="text-center">
                 <div className="text-3xl font-bold text-accent-pink mb-1">80%</div>
-                <div className="text-sm text-neutral-600">Less Impact</div>
+                <div className="text-sm text-neutral-600">
+                  {t('hero.statsBadges.lessJointImpact')}
+                </div>
               </div>
             </div>
           </div>

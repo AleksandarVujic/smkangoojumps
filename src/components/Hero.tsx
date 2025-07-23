@@ -12,23 +12,23 @@ const Hero = () => {
   const badges = [
     {
       number: '80%',
-      text: 'Less Joint Impact',
+      text: t('hero.statsBadges.lessJointImpact'),
     },
     {
       number: '800',
-      text: 'kcal Burned per Hour',
+      text: t('hero.statsBadges.caloriesBurnedPerHour'),
     },
     {
       number: '25%',
-      text: 'More Calorie Burn',
+      text: t('hero.statsBadges.moreCaloriesBurned'),
     },
     {
       number: '100%',
-      text: 'Fun & Safe Workout',
+      text: t('hero.statsBadges.funSafeTraining'),
     },
     {
-      number: 'All',
-      text: 'Ages & Levels Welcome',
+      number: t('kangoo.allLevels'),
+      text: t('hero.statsBadges.allAgesLevelsWelcome'),
     },
   ];
 
