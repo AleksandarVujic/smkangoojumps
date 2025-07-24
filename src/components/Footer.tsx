@@ -1,5 +1,6 @@
 import { Instagram, Facebook, MessageCircle, Mail, Phone, MapPin } from 'lucide-react';
 import { Trans, useTranslation } from 'react-i18next';
+import { WHATSAPP_LINK } from '../constants';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -68,11 +69,7 @@ const Footer = () => {
                 <div className="flex items-start">
                   <MapPin className="w-5 h-5 text-accent-pink mt-1 mr-3" />
                   <div className="text-neutral-400">
-                    {/* <div>Филипа Кљајића 1а</div>
-                    <div>15300 Лозница, Србија</div> */}
                     <Trans i18nKey="contact.address" components={{ 1: <br /> }} />
-
-
                   </div>
                 </div>
               </a>
@@ -93,8 +90,10 @@ const Footer = () => {
             {/* Quick WhatsApp */}
             <div className="mt-6 p-4 bg-green-600/10 border border-green-600/20 rounded-lg">
               <a
-                href="https://wa.me/1234567890"
+                href={WHATSAPP_LINK}
+                target="_blank"
                 className="flex items-center text-green-400 hover:text-green-300 transition-colors"
+                aria-label='Quick WhatsApp Contact'
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
                 {t('footer.quickWhatsapp')}

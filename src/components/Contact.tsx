@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send, MessageCircle, Instagram, Facebook } from 'lucide-react';
 import { Trans, useTranslation } from 'react-i18next';
 import GoogleMap from './GoogleMap';
+import { WHATSAPP_LINK } from '../constants';
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -118,12 +119,14 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Quick WhatsApp CTA */}
+            {/* Quick WhatsApp */}
             <div className="mt-8 p-6 bg-gradient-to-r from-green-50 to-green-100 rounded-2xl border border-green-200">
-              <div className="flex items-center mb-3">
-                <MessageCircle className="w-6 h-6 text-green-600 mr-2" />
-                <h4 className="font-semibold text-green-800">{t('contact.quickWhatsapp')}</h4>
-              </div>
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center mb-4" aria-label='Quick WhatsApp Contact'>
+                <div className="flex items-center mb-3">
+                  <MessageCircle className="w-6 h-6 text-green-600 mr-2" />
+                  <h4 className="font-semibold text-green-800">{t('contact.quickWhatsapp')}</h4>
+                </div>
+              </a>
               <p className="text-green-700 mb-4 text-sm">
                 {t('contact.quickWhatsappDesc')}
               </p>
