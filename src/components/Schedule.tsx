@@ -3,6 +3,7 @@ import { Calendar, Clock, MapPin, Users } from 'lucide-react';
 import { PopupButton } from "react-calendly";
 import { Trans, useTranslation } from 'react-i18next';
 import i18n from '../i18n';
+import GoogleCalendarButton from './GoogleCalendarButton';
 
 const Schedule = () => {
   const { t } = useTranslation();
@@ -52,7 +53,7 @@ const Schedule = () => {
       spots: 10,
       location: 'SM Fitness Studio',
       level: t('kangoo.allLevels'),
-      bookURL: 'https://calendly.com/alex-vujic-pro/gentle-bounce'
+      bookURL: 'https://doodle.com/bp/alexandervujic/power-jumps'
     }
   ];
 
@@ -184,7 +185,7 @@ const Schedule = () => {
                       <div className="text-sm text-neutral-600">
                         <b>{t('schedule.instructor')}</b>{t('common.instructor_sm')} <br /> {t('schedule.location', { place: classItem.location })}
                       </div>
-
+                      {/* <GoogleCalendarButton /> */}
                       <PopupButton
                         className={`px-5 py-2 text-sm rounded-full font-medium transition-all duration-300 ${selectedClass === classItem.id
                           ? 'bg-accent-pink text-primary-white shadow-lg'

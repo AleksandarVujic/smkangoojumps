@@ -10,7 +10,7 @@ const Programs = () => {
       intensity: t('programs.intensity.low'),
       description: t('programs.beginnerDesc'),
       features: [t('programs.basicTechniques'), t('programs.coreStrengthening'), t('programs.balanceTraining'), t('programs.funChoreography')],
-      image: "assets/images/kangoo_programs_1.png",
+      image: "assets/images/kangoo_programs_1.webp",
       price: "Drop-in Class",
       popular: false
     },
@@ -20,7 +20,7 @@ const Programs = () => {
       intensity: t('programs.intensity.high'),
       description: t('programs.powerDesc'),
       features: [t('programs.hiitTraining'), t('programs.advancedChoreography'), t('programs.strengthCircuits'), t('programs.fatBurning')],
-      image: "assets/images/kangoo_programs_2.png",
+      image: "assets/images/kangoo_programs_2.webp",
       price: "Drop-in Class",
       popular: true
     },
@@ -30,7 +30,7 @@ const Programs = () => {
       intensity: t('programs.intensity.low'),
       description: t('programs.gentleDesc'),
       features: [t('programs.jointFriendlyMovements'), t('programs.flexibilityFocus'), t('programs.rehabilitationSafe'), t('programs.stressRelief')],
-      image: "assets/images/kangoo_programs_3.png",
+      image: "assets/images/kangoo_programs_3.webp",
       price: "Drop-in Class",
       popular: false
     },
@@ -40,7 +40,7 @@ const Programs = () => {
       intensity: t('programs.intensity.medium'),
       description: t('programs.danceDesc'),
       features: [t('programs.danceChoreography'), t('programs.musicVariety'), t('programs.creativeExpression'), t('programs.socialConnection')],
-      image: "assets/images/kangoo_programs_4.png",
+      image: "assets/images/kangoo_programs_4.webp",
       price: "Drop-in Class",
       popular: false
     }

@@ -25,19 +25,19 @@ const About = () => {
           <div className="relative">
             <div className="grid grid-cols-2 gap-4">
               <img
-                src="assets/images/kangoo_about_me_1.png"
+                src="assets/images/kangoo_about_me_1.webp"
                 alt="SM Instructor Portrait"
                 className="w-full h-64 object-cover rounded-2xl shadow-lg transition-transform duration-300 ease-in-out hover:scale-[1.3]"
               />
               <img
-                src="assets/images/kangoo_about_me_2.png"
+                src="assets/images/kangoo_about_me_2.webp"
                 alt="Training Session"
                 className="w-full h-64 object-cover rounded-2xl shadow-lg mt-8 transition-transform duration-300 ease-in-out hover:scale-[1.3]"
               />
             </div>
             <div className="mt-4">
               <img
-                src="assets/images/kangoo_about_me_3.png"
+                src="assets/images/kangoo_about_me_3.webp"
                 alt="Group Class"
                 className="w-full h-48 object-cover rounded-2xl shadow-lg transition-transform duration-300 ease-in-out hover:scale-[1.3]"
               />

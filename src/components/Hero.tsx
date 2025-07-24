@@ -53,7 +53,7 @@ const Hero = () => {
   return (
     <>
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-beige via-primary-gray to-primary-white">
-        <div className="absolute inset-0 bg-[url('assets/images/hero_bg.png')] bg-cover bg-center opacity-10"></div>
+        <div className="absolute inset-0 bg-[url('assets/images/hero_bg.webp')] bg-cover bg-center opacity-10"></div>
 
         {/* Floating Shapes */}
         <div className="absolute top-20 left-10 w-20 h-20 bg-accent-pink rounded-full opacity-20 animate-float"></div>
@@ -121,7 +121,7 @@ const Hero = () => {
             <div className={`relative transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'} mt-8`}>
               <div className="relative">
                 <img
-                  src="assets/images/hero_img.png"
+                  src="assets/images/hero_img.webp"
                   alt="Kangoo Jumps Fitness Training"
                   className="w-full h-[600px] object-cover rounded-3xl shadow-2xl"
                 />
