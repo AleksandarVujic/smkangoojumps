@@ -53,10 +53,9 @@ const Hero = () => {
   return (
     <>
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-beige via-primary-gray to-primary-white">
-        {/* Background Elements */}
         <div className="absolute inset-0 bg-[url('assets/images/hero_bg.png')] bg-cover bg-center opacity-10"></div>
 
-        {/* Floating Geometric Shapes */}
+        {/* Floating Shapes */}
         <div className="absolute top-20 left-10 w-20 h-20 bg-accent-pink rounded-full opacity-20 animate-float"></div>
         <div className="absolute top-40 right-20 w-16 h-16 bg-accent-gold rounded-lg opacity-20 animate-float" style={{ animationDelay: '2s' }}></div>
         <div className="absolute bottom-40 left-20 w-24 h-24 bg-accent-coral rounded-full opacity-20 animate-float" style={{ animationDelay: '4s' }}></div>
@@ -129,11 +128,7 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-accent-pink/20 to-transparent rounded-3xl"></div>
 
                 {/* Floating badge Card */}
-                {/* <div className="absolute top-6 right-6 bg-primary-white rounded-xl p-4 shadow-lg">
-                  <div className="text-2xl font-bold text-accent-pink">80%</div>
-                  <div className="text-xs text-neutral-600">{t('hero.lessJointImpact')}</div>
-                </div> */}
-                <div className="absolute top-6 right-6 bg-primary-white rounded-xl p-4 shadow-lg transition-all duration-500 ease-in-out">
+                <div className="absolute bottom-4 right-4 sm:top-4 sm:right-4 sm:bottom-auto bg-primary-white rounded-xl p-4 shadow-lg transition-all duration-500 ease-in-out">
                   <div
                     key={badgeIndex}
                     className="transition-opacity duration-500 ease-in-out opacity-100 animate-fade"

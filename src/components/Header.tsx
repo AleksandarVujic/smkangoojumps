@@ -21,7 +21,6 @@ const Header = () => {
     { name: t('navigation.programs'), href: '#programs' },
     { name: t('navigation.schedule'), href: '#schedule' },
     { name: t('navigation.testimonials'), href: '#testimonials' },
-    // { name: t('navigation.contact'), href: '#contact' },
   ];
 
   return (
@@ -34,17 +33,16 @@ const Header = () => {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="flex items-center hover:opacity-80 transition-opacity duration-300"
           >
-            <div className="w-16 h-16 bg-accent-pink rounded-lg flex items-center justify-center">
-              {/* <span className="text-primary-white font-bold text-xl">SM</span> */}
+            <div className="w-16 h-16 bg-transparent rounded-lg flex items-center justify-center">
               <img
                 src="/sm_kangoo_jumps_logo.png"
                 alt="SM Kangoo Jumps Logo"
-                className="h-16 w-auto rounded-lg"
+                className='w-24 sm:w-32 md:w-40 lg:w-52 xl:w-60 h-auto rounded-lg'
               />
             </div>
             <div className="ml-3 hidden sm:block">
-              <h1 className="text-lg font-bold text-primary-black">SM Kangoo Jumps</h1>
-              <p className="text-xs text-neutral-600">Premium Fitness Studio</p>
+              <h1 className="text-2xl font-bold text-primary-black font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 drop-shadow-lg animate-pulse">SM Kangoo Jumps</h1>
+              <p className="text-xs text-neutral-600 text-left font-bold">Premium Fitness Studio</p>
             </div>
           </button>
 
@@ -61,7 +59,6 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <LanguageSwitcher />
             <a
@@ -80,7 +77,6 @@ const Header = () => {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden p-2 rounded-md text-neutral-700 hover:text-accent-pink"
