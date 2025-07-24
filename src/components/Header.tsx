@@ -41,7 +41,7 @@ const Header = () => {
               />
             </div>
             <div className="ml-3 hidden sm:block">
-              <h1 className="text-2xl font-bold text-primary-black font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 drop-shadow-lg animate-pulse">SM Kangoo Jumps</h1>
+              <h1 className="text-xl font-bold text-primary-black font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 drop-shadow-lg animate-pulse">SM Kangoo Jumps</h1>
               <p className="text-xs text-neutral-600 text-left font-bold">Premium Fitness Studio</p>
             </div>
           </button>
