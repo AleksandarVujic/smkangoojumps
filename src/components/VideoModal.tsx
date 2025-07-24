@@ -10,56 +10,22 @@ interface VideoModalProps {
 }
 
 const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose, videoUrl, title = "Demo Video" }) => {
-    const [showSpinner, setShowSpinner] = React.useState(false);
-
     const { t } = useTranslation();
     const videoRef = useRef<HTMLVideoElement>(null);
     const modalRef = useRef<HTMLDivElement>(null);
 
-    // Handle ESC key press
+    const [showSpinner, setShowSpinner] = React.useState(false);
+
     useEffect(() => {
-        const handleEscKey = (event: KeyboardEvent) => {
-            if (event.key === 'Escape' && isOpen) {
-                onClose();
-            }
-        };
-
-        if (isOpen) {
-            document.addEventListener('keydown', handleEscKey);
-            // Prevent body scroll when modal is open
-            document.body.style.overflow = 'hidden';
-
-
-            setShowSpinner(true);
-            const timeout = setTimeout(() => setShowSpinner(false), 4000);
-            return () => clearTimeout(timeout);
-
-        } else {
-            document.body.style.overflow = 'unset';
-            setShowSpinner(false);
+        if (!isOpen) {
+            setShowSpinner(false); 
+            return;
         }
 
-        return () => {
-            document.removeEventListener('keydown', handleEscKey);
-            document.body.style.overflow = 'unset';
-        };
-    }, [isOpen, onClose]);
+        setShowSpinner(true); 
+        const timeout = setTimeout(() => setShowSpinner(false), 4000);
 
-    // Handle video play/pause based on modal state
-    useEffect(() => {
-        if (videoRef.current) {
-            if (isOpen) {
-                // Small delay to ensure modal is fully rendered
-                setTimeout(() => {
-                    videoRef.current?.play().catch(error => {
-                        console.log('Autoplay prevented by browser:', error);
-                    });
-                }, 300);
-            } else {
-                videoRef.current.pause();
-                videoRef.current.currentTime = 0; // Reset video to beginning
-            }
-        }
+        return () => clearTimeout(timeout); 
     }, [isOpen]);
 
     // Handle click outside modal
@@ -68,13 +34,6 @@ const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose, videoUrl, titl
             onClose();
         }
     };
-
-    // Focus management for accessibility
-    useEffect(() => {
-        if (isOpen && modalRef.current) {
-            modalRef.current.focus();
-        }
-    }, [isOpen]);
 
     if (!isOpen) return null;
 
@@ -131,13 +90,6 @@ const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose, videoUrl, titl
                                 <p className="text-accent-gold text-lg sm:text-xl font-semibold tracking-wide animate-pulse">{t('hero.loadingYourTransformation')}</p>
                             </div>
                         </div>)}
-                </div>
-
-                {/* Video Title */}
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary-black/80 to-transparent p-6">
-                    <h3 id="video-modal-title" className="text-primary-white font-semibold text-lg">
-                        {title}
-                    </h3>
                 </div>
             </div>
         </div>
