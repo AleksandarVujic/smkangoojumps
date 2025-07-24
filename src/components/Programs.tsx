@@ -122,7 +122,7 @@ const Programs = () => {
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between pt-6 border-t border-neutral-200">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-6 border-t border-neutral-200">
                   <div>
                     <span className="text-sm text-neutral-500">{t('programs.pricing')}</span>
                     <div className="font-semibold text-primary-black">{program.price}</div>
