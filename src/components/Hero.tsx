@@ -111,7 +111,7 @@ const Hero = () => {
                   <div className="text-sm text-neutral-600">{t('hero.clientSatisfaction')}</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-accent-gold mb-1">3+</div>
+                  <div className="text-3xl font-bold text-accent-gold mb-1">9+</div>
                   <div className="text-sm text-neutral-600">{t('hero.yearsExperience')}</div>
                 </div>
               </div>

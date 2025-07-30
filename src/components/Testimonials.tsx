@@ -8,54 +8,34 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      age: "32",
-      program: "Power Jump",
+      name: t('testimonials.testimonial1.name'),
+      age: t('testimonials.testimonial1.age'),
+      program: 'Power Jumps',
       rating: 5,
-      text: "I've tried every fitness program out there, but nothing compares to Kangoo Jumps with SM. The low impact on my knees while still getting an incredible workout is amazing. I've lost 15 pounds and gained so much confidence!",
-      image: "https://images.pexels.com/photos/3076509/pexels-photo-3076509.jpeg?auto=compress&cs=tinysrgb&w=200",
-      before: "Had knee issues from running",
-      after: "15 lbs lost, pain-free workouts"
-    },
-    {
-      name: "Michael Chen",
-      age: "45",
-      program: "Gentle Bounce",
-      rating: 5,
-      text: "After my hip surgery, I thought my active days were over. SM's gentle bounce classes helped me regain my strength and mobility. The community here is so supportive, and SM is an incredible instructor.",
-      image: "https://images.pexels.com/photos/3768916/pexels-photo-3768916.jpeg?auto=compress&cs=tinysrgb&w=200",
-      before: "Post-surgery rehabilitation",
-      after: "Full mobility restored"
-    },
-    {
-      name: "Emma Rodriguez",
-      age: "28",
-      program: "Dance Bounce",
-      rating: 5,
-      text: "Dance Bounce is the highlight of my week! It doesn't feel like exercise - it feels like a party. SM creates such a fun, judgment-free environment where everyone can express themselves.",
+      text: t('testimonials.testimonial1.text'),
       image: "https://images.pexels.com/photos/3837757/pexels-photo-3837757.jpeg?auto=compress&cs=tinysrgb&w=200",
-      before: "Struggled with traditional gyms",
-      after: "Found joy in fitness again"
+      before: t('testimonials.testimonial1.before'),
+      after: t('testimonials.testimonial1.after')
     },
     {
-      name: "David Thompson",
-      age: "55",
-      program: "Beginner Bounce",
+      name: t('testimonials.testimonial2.name'),
+      age: t('testimonials.testimonial2.age'),
+      program: 'Power Jumps',
       rating: 5,
-      text: "As someone who hadn't exercised in years, I was nervous about starting. SM made me feel welcome from day one. The beginner classes are perfect for building confidence, and now I'm hooked!",
-      image: "https://images.pexels.com/photos/4761352/pexels-photo-4761352.jpeg?auto=compress&cs=tinysrgb&w=200",
-      before: "Sedentary lifestyle for years",
-      after: "Regular exercise routine"
+      text: t('testimonials.testimonial2.text'),
+      image: "https://images.pexels.com/photos/3837757/pexels-photo-3837757.jpeg?auto=compress&cs=tinysrgb&w=200",
+      before: t('testimonials.testimonial2.before'),
+      after: t('testimonials.testimonial2.after')
     },
     {
-      name: "Lisa Park",
-      age: "39",
-      program: "Power Jump",
+      name: t('testimonials.testimonial3.name'),
+      age: t('testimonials.testimonial3.age'),
+      program: 'Power Jumps',
       rating: 5,
-      text: "The stress relief I get from these classes is incredible. After a long day at work, bouncing away my stress while getting fit is exactly what I needed. SM's energy is contagious!",
-      image: "https://images.pexels.com/photos/4761771/pexels-photo-4761771.jpeg?auto=compress&cs=tinysrgb&w=200",
-      before: "High stress, low energy",
-      after: "Stress management & high energy"
+      text: t('testimonials.testimonial3.text'),
+      image: "https://images.pexels.com/photos/3837757/pexels-photo-3837757.jpeg?auto=compress&cs=tinysrgb&w=200",
+      before: t('testimonials.testimonial3.before'),
+      after: t('testimonials.testimonial3.after')
     }
   ];
 
@@ -103,7 +83,7 @@ const Testimonials = () => {
                 />
                 <div className="mt-4">
                   <h3 className="text-xl font-bold text-primary-black">{current.name}</h3>
-                  <p className="text-neutral-600">Age {current.age} • {current.program}</p>
+                  <p className="text-neutral-600">{current.age} • {current.program}</p>
                   <div className="flex justify-center mt-2">
                     {[...Array(current.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-accent-gold fill-current" />
@@ -121,11 +101,11 @@ const Testimonials = () => {
                 {/* Transformation */}
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="bg-primary-white rounded-xl p-4">
-                    <div className="text-sm text-neutral-500 mb-1">Before</div>
+                    <div className="text-sm text-neutral-500 mb-1">{t('common.before')}</div>
                     <div className="font-semibold text-neutral-700">{current.before}</div>
                   </div>
                   <div className="bg-primary-white rounded-xl p-4">
-                    <div className="text-sm text-neutral-500 mb-1">After</div>
+                    <div className="text-sm text-neutral-500 mb-1">{t('common.after')}</div>
                     <div className="font-semibold text-accent-pink">{current.after}</div>
                   </div>
                 </div>

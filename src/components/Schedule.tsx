@@ -3,7 +3,6 @@ import { Calendar, Clock, MapPin, Users } from 'lucide-react';
 import { PopupButton } from "react-calendly";
 import { Trans, useTranslation } from 'react-i18next';
 import i18n from '../i18n';
-import GoogleCalendarButton from './GoogleCalendarButton';
 
 const Schedule = () => {
   const { t } = useTranslation();
@@ -191,7 +190,7 @@ const Schedule = () => {
                           ? 'bg-accent-pink text-primary-white shadow-lg'
                           : 'bg-neutral-100 text-neutral-700 hover:bg-accent-pink hover:text-primary-white'
                           }`}
-                        url={classItem.bookURL}
+                        url='https://cal.com/alexander-vujic-wbluqy/power-jumps'
                         rootElement={document.getElementById("root") as HTMLElement}
                         text={t('schedule.bookNow')}
                         pageSettings={{

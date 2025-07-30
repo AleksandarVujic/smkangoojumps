@@ -49,9 +49,9 @@
   "kangoo": {
     "revolutionaryFitness": "Revolutionary Fitness",
     "title": "What is <1>Kangoo Jumps</1>?",
-    "description": "Kangoo Jumps is a revolutionary fitness program that combines cardiovascular exercise with fun, using specially designed rebound shoes that provide incredible benefits for your body and mind.",
+    "description": "Kangoo Jumps is a revolutionary fitness program that combines cardio training and body shaping exercises in a fun way, using specially designed rebound shoes that provide incredible benefits for your body and mind.",
     "scienceBehind": "The Science Behind the Bounce",
-    "scienceDesc1": "Kangoo Jumps uses specially designed rebound shoes with a patented spring system that reduces the impact on your joints while maximizing the cardiovascular and muscle-toning benefits.",
+    "description1": "Welcome! I’m Slađana Marković, your certified Kangoo Jumps instructor and the only licensed trainer in our area. As a graduate in physical education and sports, I have experienced all kinds of sports, but this dynamic and exciting aerobic workout truly caught my attention. My journey with Kangoo Jumps began in 2016 when I discovered this amazing training method, which protects the joints and spine by absorbing the impact of every jump. Kangoo Jumps has transformed not only my body but also my entire approach to fitness.",
     "scienceDesc2": "Originally developed for rehabilitation, these shoes have evolved into one of the most effective and enjoyable fitness programs available today. The unique bouncing motion engages your core, improves balance, and provides a full-body workout like no other.",
     "scienceDesc3": "Studies show that Kangoo Jumps can burn up to 25% more calories than traditional aerobics while being gentler on your body than walking on concrete.",
     "perfectFor": "Perfect For:",
@@ -177,7 +177,7 @@
     "bookFirstClass": "Book Your First Class",
     "askQuestions": "Ask Questions First",
     "testimonial1": {
-      "name": "Sarah Johnson",
+      "name": "Sarah",
       "age": "32",
       "program": "Power Jump",
       "text": "I've tried every fitness program out there, but nothing compares to Kangoo Jumps with SM. The low impact on my knees while still getting an incredible workout is amazing. I've lost 15 pounds and gained so much confidence!",
@@ -185,7 +185,7 @@
       "after": "15 lbs lost, pain-free workouts"
     },
     "testimonial2": {
-      "name": "Michael Chen",
+      "name": "Mila",
       "age": "45",
       "program": "Gentle Bounce",
       "text": "After my hip surgery, I thought my active days were over. SM's gentle bounce classes helped me regain my strength and mobility. The community here is so supportive, and SM is an incredible instructor.",
@@ -193,28 +193,12 @@
       "after": "Full mobility restored"
     },
     "testimonial3": {
-      "name": "Emma Rodriguez",
+      "name": "Emma",
       "age": "28",
       "program": "Dance Bounce",
       "text": "Dance Bounce is the highlight of my week! It doesn't feel like exercise - it feels like a party. SM creates such a fun, judgment-free environment where everyone can express themselves.",
       "before": "Struggled with traditional gyms",
       "after": "Found joy in fitness again"
-    },
-    "testimonial4": {
-      "name": "David Thompson",
-      "age": "55",
-      "program": "Beginner Bounce",
-      "text": "As someone who hadn't exercised in years, I was nervous about starting. SM made me feel welcome from day one. The beginner classes are perfect for building confidence, and now I'm hooked!",
-      "before": "Sedentary lifestyle for years",
-      "after": "Regular exercise routine"
-    },
-    "testimonial5": {
-      "name": "Lisa Park",
-      "age": "39",
-      "program": "Power Jump",
-      "text": "The stress relief I get from these classes is incredible. After a long day at work, bouncing away my stress while getting fit is exactly what I needed. SM's energy is contagious!",
-      "before": "High stress, low energy",
-      "after": "Stress management & high energy"
     }
   },
   "faq": {
@@ -241,7 +225,7 @@
       "q6": "How much do classes cost?",
       "a6": "I offer flexible pricing options including drop-in rates, class packages, and monthly memberships. Contact me for current pricing and special introductory offers for new clients. I also offer free consultations to help you choose the right program.",
       "q7": "What size shoes do you have available?",
-      "a7": "I have Kangoo Jump shoes in sizes from US Women's 5 to Men's 13. The shoes are unisex and adjustable. I'll help you find the perfect fit during your first visit to ensure comfort and safety.",
+      "a7": "I have Kangoo Jump boots available in sizes from 36 to 42. I will help you find the perfect fit during your first visit to ensure comfort and safety.",
       "q8": "Can I try a class before committing?",
       "a8": "Absolutely! I encourage everyone to try a beginner class first. This gives you a chance to experience Kangoo Jumps, meet me, and see if it's right for you. Equipment is provided for your trial class."
     }
@@ -305,6 +289,8 @@
     "clear": "Clear",
     "select": "Select",
     "required": "Required",
-    "optional": "Optional"
+    "optional": "Optional",
+    "before": "Before",
+    "after": "After"
   }
 }
