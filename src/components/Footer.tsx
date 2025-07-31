@@ -31,7 +31,7 @@ const Footer = () => {
               <a href="https://www.facebook.com/SmKangooJumpsMaribor/" aria-label="Facebook SM Kangoo Jumps" className="bg-neutral-800 p-3 rounded-lg hover:bg-accent-coral transition-colors duration-300">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" aria-label="Messages SM Kangoo Jumps" className="bg-neutral-800 p-3 rounded-lg hover:bg-accent-gold transition-colors duration-300">
+              <a href="sms:+381629231886" aria-label="Messages SM Kangoo Jumps" className="bg-neutral-800 p-3 rounded-lg hover:bg-accent-gold transition-colors duration-300">
                 <MessageCircle className="w-5 h-5" />
               </a>
             </div>
@@ -75,7 +75,7 @@ const Footer = () => {
               </a>
               <div className="flex items-center">
                 <Phone className="w-5 h-5 text-accent-pink mr-3" />
-                <a href="tel:+381651234567" className="text-neutral-400 hover:text-accent-pink transition-colors">
+                <a href="tel:+381629231886" className="text-neutral-400 hover:text-accent-pink transition-colors">
                   +381 65 1234567
                 </a>
               </div>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send, MessageCircle, Instagram, Facebook } from 'lucide-react';
 import { Trans, useTranslation } from 'react-i18next';
 import GoogleMap from './GoogleMap';
-import { WHATSAPP_LINK } from '../constants';
+import { PHONE_NUMBER, WHATSAPP_LINK } from '../constants';
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -56,8 +56,8 @@ const Contact = () => {
                 <div>
                   <h4 className="font-semibold text-primary-black mb-1">{t('contact.phoneWhatsapp')}</h4>
                   <p className="text-neutral-600 mb-2">{t('contact.phoneDesc')}</p>
-                  <a href="tel:+381651234567" className="text-accent-pink hover:text-accent-coral transition-colors">
-                    +381 65 1234567
+                  <a href="tel:{'PHONE_NUMBER'}" className="text-accent-pink hover:text-accent-coral transition-colors">
+                    {PHONE_NUMBER}
                   </a>
                 </div>
               </div>
