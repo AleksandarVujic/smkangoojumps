@@ -123,7 +123,7 @@
     "spotsLeft": "{{count}} место осталось",
     "spotsLeft_plural": "{{count}} мест осталось",
     "instructor": "Инструктор: ",
-    "location": "Место: {{place}}",
+    "location": "<strong>Место:</strong> {{place}}",
     "selected": "Выбрано",
     "bookNow": "Записаться Сейчас",
     "completeBooking": "Завершить Бронирование",

@@ -123,7 +123,7 @@
     "spotsLeft": "{{count}} место остало",
     "spotsLeft_plural": "{{count}} места остало",
     "instructor": "Инструктор: ",
-    "location": "Локација: {{place}}",
+    "location": "<strong>Локација:</strong> {{place}}",
     "selected": "Изабрано",
     "bookNow": "Резервиши",
     "completeBooking": "Заврши Резервацију",

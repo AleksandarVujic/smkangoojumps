@@ -11,7 +11,7 @@ const Programs = () => {
       description: t('programs.beginnerDesc'),
       features: [t('programs.basicTechniques'), t('programs.coreStrengthening'), t('programs.balanceTraining'), t('programs.funChoreography')],
       image: "assets/images/kangoo_programs_1.webp",
-      price: "Drop-in Class",
+      price: "Contact for Pricing",
       popular: false
     },
     {
@@ -21,29 +21,29 @@ const Programs = () => {
       description: t('programs.powerDesc'),
       features: [t('programs.hiitTraining'), t('programs.advancedChoreography'), t('programs.strengthCircuits'), t('programs.fatBurning')],
       image: "assets/images/kangoo_programs_2.webp",
-      price: "Drop-in Class",
+      price: "Contact for Pricing",
       popular: true
     },
-    {
-      title: t('programs.gentleBounce'),
-      duration: t('programs.duration', { count: 30 }),
-      intensity: t('programs.intensity.low'),
-      description: t('programs.gentleDesc'),
-      features: [t('programs.jointFriendlyMovements'), t('programs.flexibilityFocus'), t('programs.rehabilitationSafe'), t('programs.stressRelief')],
-      image: "assets/images/kangoo_programs_3.webp",
-      price: "Drop-in Class",
-      popular: false
-    },
-    {
-      title: t('programs.danceBounce'),
-      duration: t('programs.duration', { count: 50 }),
-      intensity: t('programs.intensity.medium'),
-      description: t('programs.danceDesc'),
-      features: [t('programs.danceChoreography'), t('programs.musicVariety'), t('programs.creativeExpression'), t('programs.socialConnection')],
-      image: "assets/images/kangoo_programs_4.webp",
-      price: "Drop-in Class",
-      popular: false
-    }
+    // {
+    //   title: t('programs.gentleBounce'),
+    //   duration: t('programs.duration', { count: 30 }),
+    //   intensity: t('programs.intensity.low'),
+    //   description: t('programs.gentleDesc'),
+    //   features: [t('programs.jointFriendlyMovements'), t('programs.flexibilityFocus'), t('programs.rehabilitationSafe'), t('programs.stressRelief')],
+    //   image: "assets/images/kangoo_programs_3.webp",
+    //   price: "Drop-in Class",
+    //   popular: false
+    // },
+    // {
+    //   title: t('programs.danceBounce'),
+    //   duration: t('programs.duration', { count: 50 }),
+    //   intensity: t('programs.intensity.medium'),
+    //   description: t('programs.danceDesc'),
+    //   features: [t('programs.danceChoreography'), t('programs.musicVariety'), t('programs.creativeExpression'), t('programs.socialConnection')],
+    //   image: "assets/images/kangoo_programs_4.webp",
+    //   price: "Drop-in Class",
+    //   popular: false
+    // }
   ];
 
   const getIntensityColor = (intensity: string) => {
@@ -124,10 +124,10 @@ const Programs = () => {
 
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-6 border-t border-neutral-200">
                   <div>
-                    <span className="text-sm text-neutral-500">{t('programs.pricing')}</span>
-                    <div className="font-semibold text-primary-black">{program.price}</div>
+                    {/* <span className="text-sm text-neutral-500">{t('programs.pricing')}</span>
+                    <div className="font-semibold text-primary-black">{program.price}</div> */}
                   </div>
-                  <a href="#schedule" className="flex cursor-pointer items-center px-6 py-3 bg-accent-pink text-primary-white rounded-full hover:bg-accent-coral transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                  <a href="#schedule" className="flex justify-end cursor-pointer items-center px-6 py-3 bg-accent-pink text-primary-white rounded-full hover:bg-accent-coral transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                     {t('programs.bookClass')}
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </a>

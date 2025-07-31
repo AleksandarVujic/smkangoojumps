@@ -53,7 +53,7 @@ const Hero = () => {
   return (
     <>
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-beige via-primary-gray to-primary-white">
-        <div className="absolute inset-0 bg-[url('assets/images/hero_bg.webp')] bg-cover bg-center opacity-10"></div>
+        <div className="absolute inset-0 bg-[url('/assets/images/hero_bg.webp')] bg-cover bg-center opacity-10"></div>
 
         {/* Floating Shapes */}
         <div className="absolute top-20 left-10 w-20 h-20 bg-accent-pink rounded-full opacity-20 animate-float"></div>

@@ -13,10 +13,10 @@ const Schedule = () => {
     {
       id: '1',
       name: 'Beginner Bounce',
-      time: '9:00 AM',
-      duration: 45,
+      time: '18h & 19:30h',
+      duration: 15,
       instructor: 'SM',
-      spots: 8,
+      spots: 25,
       location: 'SM Fitness Studio',
       level: t('schedule.levels.beginner'),
       bookURL: 'https://calendly.com/alex-vujic-pro/training'
@@ -24,36 +24,36 @@ const Schedule = () => {
     {
       id: '2',
       name: 'Power Jump',
-      time: '10:30 AM',
+      time: '18h & 19:30h',
       duration: 60,
       instructor: 'SM',
-      spots: 5,
+      spots: 25,
       location: 'SM Fitness Studio',
       level: t('schedule.levels.advanced'),
       bookURL: 'https://calendly.com/alex-vujic-pro/power-jumps'
     },
-    {
-      id: '3',
-      name: 'Dance Bounce',
-      time: '6:00 PM',
-      duration: 50,
-      instructor: 'SM',
-      spots: 6,
-      location: 'SM Fitness Studio',
-      level: t('schedule.levels.intermediate'),
-      bookURL: 'https://calendly.com/alex-vujic-pro/dance-bounce'
-    },
-    {
-      id: '4',
-      name: 'Gentle Bounce',
-      time: '7:30 PM',
-      duration: 30,
-      instructor: 'SM',
-      spots: 10,
-      location: 'SM Fitness Studio',
-      level: t('kangoo.allLevels'),
-      bookURL: 'https://doodle.com/bp/alexandervujic/power-jumps'
-    }
+    // {
+    //   id: '3',
+    //   name: 'Dance Bounce',
+    //   time: '6:00 PM',
+    //   duration: 50,
+    //   instructor: 'SM',
+    //   spots: 6,
+    //   location: 'SM Fitness Studio',
+    //   level: t('schedule.levels.intermediate'),
+    //   bookURL: 'https://calendly.com/alex-vujic-pro/dance-bounce'
+    // },
+    // {
+    //   id: '4',
+    //   name: 'Gentle Bounce',
+    //   time: '7:30 PM',
+    //   duration: 30,
+    //   instructor: 'SM',
+    //   spots: 10,
+    //   location: 'SM Fitness Studio',
+    //   level: t('kangoo.allLevels'),
+    //   bookURL: 'https://doodle.com/bp/alexandervujic/power-jumps'
+    // }
   ];
 
   const weekDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
@@ -182,7 +182,12 @@ const Schedule = () => {
 
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                       <div className="text-sm text-neutral-600">
-                        <b>{t('schedule.instructor')}</b>{t('common.instructor_sm')} <br /> {t('schedule.location', { place: classItem.location })}
+                        <b>{t('schedule.instructor')}</b>{t('common.instructor_sm')} <br />
+                        <Trans
+                          i18nKey="schedule.location"
+                          values={{ place: classItem.location }}
+                          components={{ bold: <strong /> }}
+                        />
                       </div>
                       {/* <GoogleCalendarButton /> */}
                       <PopupButton
