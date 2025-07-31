@@ -95,6 +95,7 @@ const Header = () => {
                   href={item.href}
                   className="text-neutral-700 hover:text-accent-pink transition-colors duration-200 font-medium px-4 py-2"
                   onClick={() => setIsMenuOpen(false)}
+                   aria-label="Hamburger menu"
                 >
                   {item.name}
                 </a>

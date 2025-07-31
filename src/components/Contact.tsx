@@ -113,7 +113,7 @@ const Contact = () => {
                 <a href="https://www.facebook.com/SmKangooJumpsMaribor/" aria-label="Facebook SM Kangoo Jumps" className="bg-accent-coral/10 p-3 rounded-xl hover:bg-accent-coral hover:text-primary-white transition-all duration-300">
                   <Facebook className="w-6 h-6" />
                 </a>
-                <a href="#" aria-label="Messages SM Kangoo Jumps" className="bg-accent-gold/10 p-3 rounded-xl hover:bg-accent-gold hover:text-primary-white transition-all duration-300">
+                <a href="sms:+381629231886" aria-label="Messages SM Kangoo Jumps" className="bg-accent-gold/10 p-3 rounded-xl hover:bg-accent-gold hover:text-primary-white transition-all duration-300">
                   <MessageCircle className="w-6 h-6" />
                 </a>
               </div>
