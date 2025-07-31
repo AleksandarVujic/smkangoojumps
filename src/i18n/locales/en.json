@@ -177,28 +177,28 @@
     "bookFirstClass": "Book Your First Class",
     "askQuestions": "Ask Questions First",
     "testimonial1": {
-      "name": "Sarah",
-      "age": "32",
-      "program": "Power Jump",
-      "text": "I've tried every fitness program out there, but nothing compares to Kangoo Jumps with SM. The low impact on my knees while still getting an incredible workout is amazing. I've lost 15 pounds and gained so much confidence!",
-      "before": "Had knee issues from running",
-      "after": "15 lbs lost, pain-free workouts"
+      "name": "Zorana",
+      "age": "29",
+      "program": "Strong Jump",
+      "text": "I didn’t believe I would stay and keep going. Massages only helped temporarily, but when I started training, my back stopped hurting and I no longer had problems with my shoulder blade. I literally used to cry from the pain, sometimes I’d stiffen up and the pain would spread to my lungs. During this training period, I’ve been more than satisfied. I adjusted my diet and really sweat a lot during training. The difference is obvious. I’m definitely not giving up, even after achieving results.",
+      "before": "Back problems and right shoulder blade. Lactic acid on the right side of the shoulder and blade.",
+      "after": "No more pain in the back and shoulder blade."
     },
     "testimonial2": {
-      "name": "Mila",
-      "age": "45",
-      "program": "Gentle Bounce",
-      "text": "After my hip surgery, I thought my active days were over. SM's gentle bounce classes helped me regain my strength and mobility. The community here is so supportive, and SM is an incredible instructor.",
-      "before": "Post-surgery rehabilitation",
-      "after": "Full mobility restored"
+      "name": "Marija",
+      "age": "32",
+      "program": "Gentle Jumping",
+      "text": "When I started training, it was December and I weighed 107 kilograms. That was the first time I tried Kango. By regularly attending training sessions, I weighed 90 kg in April. I really enjoy the workouts because they fill me with new energy, and I especially love that every session is different from the last.",
+      "before": "December 107 kilograms",
+      "after": "April 90 kilograms"
     },
     "testimonial3": {
-      "name": "Emma",
-      "age": "28",
-      "program": "Dance Bounce",
-      "text": "Dance Bounce is the highlight of my week! It doesn't feel like exercise - it feels like a party. SM creates such a fun, judgment-free environment where everyone can express themselves.",
+      "name": "Dijana",
+      "age": "22",
+      "program": "Dance Jumping",
+      "text": "This workout is for the soul and body! I’m overjoyed to be part of this journey! I eagerly look forward to every training session.",
       "before": "Struggled with traditional gyms",
-      "after": "Found joy in fitness again"
+      "after": "Rediscovered joy in fitness"
     }
   },
   "faq": {

@@ -13,7 +13,7 @@ const Testimonials = () => {
       program: 'Power Jumps',
       rating: 5,
       text: t('testimonials.testimonial1.text'),
-      image: "https://images.pexels.com/photos/3837757/pexels-photo-3837757.jpeg?auto=compress&cs=tinysrgb&w=200",
+      image: "assets/images/testimonials/testimonials_profile_1.webp",
       before: t('testimonials.testimonial1.before'),
       after: t('testimonials.testimonial1.after')
     },
@@ -23,7 +23,7 @@ const Testimonials = () => {
       program: 'Power Jumps',
       rating: 5,
       text: t('testimonials.testimonial2.text'),
-      image: "https://images.pexels.com/photos/3837757/pexels-photo-3837757.jpeg?auto=compress&cs=tinysrgb&w=200",
+      image: "assets/images/testimonials/testimonials_profile_2.webp",
       before: t('testimonials.testimonial2.before'),
       after: t('testimonials.testimonial2.after')
     },
@@ -33,7 +33,7 @@ const Testimonials = () => {
       program: 'Power Jumps',
       rating: 5,
       text: t('testimonials.testimonial3.text'),
-      image: "https://images.pexels.com/photos/3837757/pexels-photo-3837757.jpeg?auto=compress&cs=tinysrgb&w=200",
+      image: "assets/images/testimonials/testimonials_profile_3.webp",
       before: t('testimonials.testimonial3.before'),
       after: t('testimonials.testimonial3.after')
     }
