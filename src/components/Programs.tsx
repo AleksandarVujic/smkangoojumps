@@ -6,7 +6,7 @@ const Programs = () => {
   const programs = [
     {
       title: t('programs.beginnerBounce'),
-      duration: t('programs.duration', { count: 45 }),
+      duration: t('programs.duration', { count: 15 }),
       intensity: t('programs.intensity.low'),
       description: t('programs.beginnerDesc'),
       features: [t('programs.basicTechniques'), t('programs.coreStrengthening'), t('programs.balanceTraining'), t('programs.funChoreography')],
@@ -127,7 +127,7 @@ const Programs = () => {
                     {/* <span className="text-sm text-neutral-500">{t('programs.pricing')}</span>
                     <div className="font-semibold text-primary-black">{program.price}</div> */}
                   </div>
-                  <a href="#schedule" className="flex justify-end cursor-pointer items-center px-6 py-3 bg-accent-pink text-primary-white rounded-full hover:bg-accent-coral transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                  <a href="#schedule" className="flex cursor-pointer items-center px-6 py-3 bg-accent-pink text-primary-white rounded-full hover:bg-accent-coral transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                     {t('programs.bookClass')}
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
