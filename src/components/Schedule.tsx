@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Calendar, Clock, MapPin, Users } from 'lucide-react';
-import { PopupButton } from "react-calendly";
 import { Trans, useTranslation } from 'react-i18next';
 import i18n from '../i18n';
+import CalApp from './CallApp';
 
 const Schedule = () => {
   const { t } = useTranslation();
@@ -19,7 +19,6 @@ const Schedule = () => {
       spots: 25,
       location: 'SM Fitness Studio',
       level: t('schedule.levels.beginner'),
-      bookURL: 'https://calendly.com/alex-vujic-pro/training'
     },
     {
       id: '2',
@@ -30,7 +29,6 @@ const Schedule = () => {
       spots: 25,
       location: 'SM Fitness Studio',
       level: t('schedule.levels.advanced'),
-      bookURL: 'https://calendly.com/alex-vujic-pro/power-jumps'
     },
     // {
     //   id: '3',
@@ -41,7 +39,6 @@ const Schedule = () => {
     //   spots: 6,
     //   location: 'SM Fitness Studio',
     //   level: t('schedule.levels.intermediate'),
-    //   bookURL: 'https://calendly.com/alex-vujic-pro/dance-bounce'
     // },
     // {
     //   id: '4',
@@ -52,7 +49,6 @@ const Schedule = () => {
     //   spots: 10,
     //   location: 'SM Fitness Studio',
     //   level: t('kangoo.allLevels'),
-    //   bookURL: 'https://doodle.com/bp/alexandervujic/power-jumps'
     // }
   ];
 
@@ -189,23 +185,7 @@ const Schedule = () => {
                           components={{ bold: <strong /> }}
                         />
                       </div>
-                      {/* <GoogleCalendarButton /> */}
-                      <PopupButton
-                        className={`px-5 py-2 text-sm rounded-full font-medium transition-all duration-300 ${selectedClass === classItem.id
-                          ? 'bg-accent-pink text-primary-white shadow-lg'
-                          : 'bg-neutral-100 text-neutral-700 hover:bg-accent-pink hover:text-primary-white'
-                          }`}
-                        url='https://cal.com/alexander-vujic-wbluqy/power-jumps'
-                        rootElement={document.getElementById("root") as HTMLElement}
-                        text={t('schedule.bookNow')}
-                        pageSettings={{
-                          backgroundColor: 'ffffff',
-                          hideEventTypeDetails: false,
-                          hideLandingPageDetails: false,
-                          primaryColor: '00a2ff',
-                          textColor: '4d5055'
-                        }}
-                      />
+                      <CalApp />
                     </div>
                   </div>
                 ))}
